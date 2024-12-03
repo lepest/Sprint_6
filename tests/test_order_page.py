@@ -31,6 +31,5 @@ class TestElementOrderPage:
         main_page = MainPage(driver)
         driver.get(TestUrl.main_page_url)
         main_page.click_order_button_for_test_logo()
-        order_page.click_logo_scooter()
-        assert driver.current_url == TestUrl.main_page_url
+        assert order_page.click_logo_scooter() == TestUrl.main_page_url
 

@@ -54,3 +54,4 @@ class OrderPage(BasePage):
     def click_logo_scooter(self):
         self.click_element_with_wait(OrderPageLocators.LOGO_SCOOTER)
         self.find_element_with_wait(OrderPageLocators.ELEMENTS_MAIN_PAGE)
+        return self.get_url()
