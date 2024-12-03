@@ -1,8 +1,8 @@
 import allure
-from pages.base_page import TestBasePage
+from pages.base_page import BasePage
 from locators.main_page_locators import MainPageLocators
 
-class TestMainPage(TestBasePage):
+class MainPage(BasePage):
 
     @allure.step('Поиск и нажатие на кнопку "Заказать", для обеих кнопок')
     def click_order_button(self, locator):
@@ -39,3 +39,4 @@ class TestMainPage(TestBasePage):
     def switch_to_dzen(self):
         self.switch_to_window()
         self.find_element_with_wait(MainPageLocators.MAIN_PAGE_DZEN)
+        return self.get_url()

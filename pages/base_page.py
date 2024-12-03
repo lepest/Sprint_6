@@ -3,7 +3,7 @@ import allure
 from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.support import expected_conditions
 
-class TestBasePage:
+class BasePage:
 
     driver = None
 
@@ -44,3 +44,7 @@ class TestBasePage:
     @allure.step('Переход на другую вкладку')
     def switch_to_window(self):
         self.driver.switch_to.window(self.driver.window_handles[-1])
+
+    @allure.step('Получить url')
+    def get_url(self):
+        return self.driver.current_url

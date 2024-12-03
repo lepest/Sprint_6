@@ -1,9 +1,9 @@
 import allure
 
-from pages.base_page import TestBasePage
+from pages.base_page import BasePage
 from locators.order_page_locators import OrderPageLocators
 
-class TestOrderPage(TestBasePage):
+class OrderPage(BasePage):
 
     @allure.step('Выбрать время проката')
     def select_rental_period(self, period):
